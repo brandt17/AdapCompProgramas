@@ -1,0 +1,19 @@
+public class ejer4 {
+    public static void main(String[] args) {
+    int cantMult3 = 0;
+    int cantMult5 = 0;
+    int cantMult7 = 0;
+    for (int i = 1; i <= 100; i++) {
+	if (i % 3 == 0){ 
+            cantMult3++;
+        }if (i % 5 == 0) {
+            cantMult5++;
+	} if (i % 7 == 0) {
+            cantMult7++;
+	}
+    }
+    System.out.println("la Cantidad de multiplos de 3 es: " + cantMult3);
+    System.out.println("la Cantidad de multiplos de 5 es: " + cantMult5);
+    System.out.println("la Cantidad de multiplos de 7 es: " + cantMult7);
+    }
+}
