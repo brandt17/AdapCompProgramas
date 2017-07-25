@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ejer3 {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int cantpenalA;
+        int cantpenalB;
+        int penalesRestantes;
+        penalesRestantes = 5;
+        cantpenalA = 0;
+        cantpenalB = 0;
+        int difGol = 0;
+        do {
+            System.out.println("equipo A anoto?");
+            if (s.nextBoolean()) {
+                cantpenalA = cantpenalA + 1;
+            }
+            System.out.println("equipo B anoto?");
+            if (s.nextBoolean()) {
+                cantpenalB = cantpenalB + 1;
+            }
+            penalesRestantes--;
+            difGol = cantpenalA - cantpenalB;
+            if (difGol < 0) {
+                difGol *= -1;
+            }
+        } while (difGol < penalesRestantes && penalesRestantes > 0);
+        if (cantpenalA > cantpenalB) {
+            System.out.println("Equipo A gano con " + cantpenalA + " penales.");
+            System.out.println("Fin del juego.");
+        }
+        if (cantpenalA < cantpenalB) {
+            System.out.println("Equipo B gano con " + cantpenalB + " penales.");
+            System.out.println("Fin del juego.");
+        }
+        if (cantpenalA == cantpenalB) {
+            System.out.println("Empate");
+        }
+    }
+}
