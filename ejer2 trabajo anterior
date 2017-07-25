@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ejer2 {
+
+    public static void main(String[] args) {
+        int us1 = 0;
+        int us2 = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Ingrese un numero: ");
+        us1 = s.nextInt();
+        System.out.println("Adivine el numero: ");
+        us2 = s.nextInt();
+        if (us1 == us2) {
+              System.out.println("¡ADIVINO!");
+        }
+        if (us2 < us1) {
+            System.out.println("Se equivoco.");
+            System.out.println("El numero que ingreso es menor.");
+        }
+        if (us2 > us1) {
+            System.out.println("Se equivoco.");
+            System.out.println("El numero que ingreso es mayor.");
+        }
+    }
+}
