@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ejer5 {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a;
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Iteracion numero: " + i);
+            do {
+                System.out.println("Ingrese un numero par ");
+                a = s.nextInt();
+                if (a % 2 == 0) {
+                    System.out.println("ES PAR");
+                } else {
+                    System.out.println("NO ES PAR");
+                }
+            } while (a % 2 != 0);
+        }
+    }
+}
