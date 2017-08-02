@@ -5,21 +5,41 @@ public class ejer2 {
     public static void main(String[] args) {
         int us1 = 0;
         int us2 = 0;
+        int intentosrestantes;
+        intentosrestantes = 5;
+        int intentos;
+        intentos = 0;
         Scanner s = new Scanner(System.in);
         System.out.println("Ingrese un numero: ");
         us1 = s.nextInt();
-        System.out.println("Adivine el numero: ");
+        System.out.println("El numero es: ");
         us2 = s.nextInt();
-        if (us1 == us2) {
-              System.out.println("¡ADIVINO!");
+        int difintentos = 0;
+        do {
+            if (us1 == us2) {
+                System.out.println("ADIVINO");
+            }
+            if (us2 < us1) {
+                System.out.println("Se equivoco.");
+                System.out.println("El numero que ingreso es menor.");
+                System.out.println("El numero es: ");
+                us2 = s.nextInt();
+                intentos++;
+            }
+            if (us2 > us1) {
+                System.out.println("Se equivoco.");
+                System.out.println("El numero que ingreso es mayor.");
+                System.out.println("El numero es: ");
+                us2 = s.nextInt();
+                intentos++;
+            }
+            intentosrestantes--;
+            difintentos = intentosrestantes - intentos;
+            if (difintentos < 0) {
+                difintentos *= -1;
+            }
         }
-        if (us2 < us1) {
-            System.out.println("Se equivoco.");
-            System.out.println("El numero que ingreso es menor.");
-        }
-        if (us2 > us1) {
-            System.out.println("Se equivoco.");
-            System.out.println("El numero que ingreso es mayor.");
-        }
+        while (difintentos < intentosrestantes && intentosrestantes > 0);
+        System.out.println("fin");
     }
 }
